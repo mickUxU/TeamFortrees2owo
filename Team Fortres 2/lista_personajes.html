@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Personajes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5e7de; 
+            margin: 0;
+            padding: 15px;
+        }
+
+        h3 {
+            font-size: 16px;
+            color: #312e2c;
+            border-bottom: 2px solid #312e2c;
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        
+        .btn-personaje {
+            display: flex;
+            align-items: center; 
+            gap: 12px;           
+            text-decoration: none;
+            color: #312e2c;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 2px solid #312e2c;
+            border-radius: 6px;
+            
+            
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        
+        .btn-personaje:hover {
+            background-color: #fffaf7;
+            color: #b83838; 
+            border-color: #b83838;
+            
+            
+            transform: translateY(-4px); 
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        
+        .btn-personaje:active {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+       
+        .icono-personaje {
+            width: 32px;  
+            height: 32px;
+            border-radius: 4px;
+            background-color: #eee; 
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Mercenarios</h3>
+    <ul>
+        
+        <li>
+            <a href="info_scout.html" target="vista_personaje" class="btn-personaje">
+                <img src="ico_scout.png" alt="Scout" class="icono-personaje">
+                <span>Scout</span>
+            </a>
+        </li>
+        <li>
+            <a href="info_soldier.html" target="vista_personaje" class="btn-personaje">
+                <img src="ico_soldier.png" alt="Soldier" class="icono-personaje">
+                <span>Soldier</span>
+            </a>
+        </li>
+        <li>
+            <a href="info_pyro.html" target="vista_personaje" class="btn-personaje">
+                <img src="ico_pyro.png" alt="Pyro" class="icono-personaje">
+                <span>Pyro</span>
+            </a>
+        </li>
+        <li>
+            <a href="info_heavy.html" target="vista_personaje" class="btn-personaje">
+                <img src="ico_heavy.png" alt="Heavy" class="icono-personaje">
+                <span>Heavy</span>
+            </a>
+        </li>
+        <li>
+            <a href="info_engineer.html" target="vista_personaje" class="btn-personaje">
+                <img src="ico_engineer.png" alt="Engineer" class="icono-personaje">
+                <span>Engineer</span>
+            </a>
+        </li>
+<li>
+    <a href="info_demoman.html" target="vista_personaje" class="btn-personaje">
+        <img src="ico_demoman.png" alt="Demoman" class="icono-personaje">
+        <span>Demoman</span>
+    </a>
+</li>
+<li>
+    <a href="info_sniper.html" target="vista_personaje" class="btn-personaje">
+        <img src="ico_sniper.png" alt="Sniper" class="icono-personaje">
+        <span>Sniper</span>
+    </a>
+</li>
+<li>
+    <a href="info_medic.html" target="vista_personaje" class="btn-personaje">
+        <img src="ico_medic.png" alt="Medic" class="icono-personaje">
+        <span>Medic</span>
+    </a>
+</li>
+<li>
+    <a href="info_spy.html" target="vista_personaje" class="btn-personaje">
+        <img src="ico_spy.png" alt="Spy" class="icono-personaje">
+        <span>Spy</span>
+    </a>
+</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Accesorios Populares - TF2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('fondo_tf29.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #f5e7de; /* Crema TF2 */
+            padding: 25px;
+            margin: 0;
+        }
+
+        
+        .contexto-accesorios {
+            background-color: rgba(43, 39, 36, 0.92); 
+            border: 3px solid #e17424; 
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .contexto-accesorios h2 {
+            color: #e17424;
+            margin-top: 0;
+            text-transform: uppercase;
+            border-bottom: 2px solid #5c4a3c;
+            padding-bottom: 5px;
+            font-size: 24px;
+        }
+
+        .contexto-accesorios p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+            text-align: justify;
+        }
+
+        
+        .tabla-accesorios {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 20px;
+        }
+
+        
+        .tarjeta-accesorio {
+            background-color: rgba(59, 52, 47, 0.95); 
+            border: 2px solid #5c4a3c;
+            border-radius: 8px;
+            padding: 15px;
+            vertical-align: top;
+            width: 50%;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .tarjeta-accesorio:hover {
+            transform: translateY(-5px); 
+            border-color: #e17424;       
+        }
+
+        .img-accesorio {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .nombre-accesorio {
+            display: block;
+            font-weight: bold;
+            font-size: 17px;
+            color: #e17424; /* Naranja */
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .desc-arma {
+            font-size: 12px;
+            line-height: 1.4;
+            color: #d1c2b7;
+            margin: 0;
+            text-align: justify;
+        }
+
+       
+        .pantalla-zoom {
+            display: none; 
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .caja-ampliada {
+            background-color: #2b2724; 
+            border: 4px solid #b83838; 
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0px 0px 25px rgba(184, 56, 56, 0.6);
+            position: relative;
+            animation: aparecer 0.3s ease;
+        }
+
+        @keyframes aparecer {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .caja-ampliada img {
+            max-width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .caja-ampliada h3 {
+            color: #b83838; 
+            font-size: 24px;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+        }
+
+        .caja-ampliada p {
+            color: #f5e7de;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .boton-cerrar {
+            position: absolute;
+            top: 10px; right: 15px;
+            color: #d1c2b7;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .boton-cerrar:hover { color: #b83838; }
+    </style>
+</head>
+<body>
+
+    
+    <div class="contexto-accesorios">
+        <h2>Cosméticos de Team Fortress 2</h2>
+        <p>Los objetos cosméticos (también conocidos como sombreros o "hats") son elementos de personalización que permiten cambiar la apariencia de los mercenarios. Desde la actualización de las Ofrendas de Sniper vs. Spy en 2009, se han convertido en un pilar de la identidad del juego y de su economía, permitiendo a los jugadores destacar en el campo de batalla con estilos extravagantes, lúgubres o legendarios.Aunque aqui solo se presentan 4 accesorios estos an sido los mas solicitados por los jugadores y fandom de team fortrees 2 :D!!!
+¡Haz clic en cualquier tarjeta para ver a detalle!!</p>
+    </div>
+
+    <table class="tabla-accesorios">
+        <!-- FILA 1 -->
+        <tr>
+            <!-- 1. Gibus Fantasmagórico -->
+            <td class="tarjeta-accesorio" onclick="abrirZoom('acc_gibus.png', 'Gibus Fantasmagórico', 'El sombrero más clásico, carismático e icónico de la comunidad. Se consigue de forma gratuita mediante un logro especial al dominar en una partida pública a cualquier otro jugador que lo lleve puesto en ese momento. ¡Todo un símbolo de historia!')">
+                <img src="acc_gibus.png" alt="Gibus" class="img-accesorio">
+                <span class="nombre-accesorio">Gibus Fantasmagórico</span>
+                <p class="desc-arma">El sombrero más clásico de la comunidad. Consíguelo al dominar a un jugador que lo lleve puesto.</p>
+            </td>
+            
+            <!-- 2. Auriculares -->
+            <td class="tarjeta-accesorio" onclick="abrirZoom('acc_earphones.png', 'Auriculares (Earbuds)', 'Un objeto promocional mítico y de altísimo estatus. Fue entregado exclusivamente a los jugadores que abrieron el juego desde una computadora Mac en el año 2010. Durante muchísimo tiempo funcionó como la moneda oficial de cambio en el mercado de trades.')">
+                <img src="acc_earphones.png" alt="Auriculares" class="img-accesorio">
+                <span class="nombre-accesorio">Auriculares (Earbuds)</span>
+                <p class="desc-arma">Un objeto promocional místico del 2010. Durante años fue la moneda de cambio de clase alta.</p>
+            </td>
+        </tr>
+
+        <!-- FILA 2 -->
+        <tr>
+            <!-- 3. Filamental -->
+            <td class="tarjeta-accesorio" onclick="abrirZoom('acc_filamental.png', 'Filamental', 'Este accesorio reemplaza por completo la cabeza de la máscara de gas del Pyro con una bombilla incandescente de cristal, la cual cuenta con un filamento brillante en su interior. Queda perfecto para armar conjuntos con temáticas robóticas o electrónicas.')">
+                <img src="acc_filamental.png" alt="Filamental" class="img-accesorio">
+                <span class="nombre-accesorio">Filamental</span>
+                <p class="desc-arma">Reemplaza la cabeza del Pyro con una bombilla incandescente. Ideal para estilos robóticos.</p>
+            </td>
+            
+            <!-- 4. Sombrero de Cazarrecompensas -->
+            <td class="tarjeta-accesorio" onclick="abrirZoom('acc_bounty.png', 'Sombrero de Cazarrecompensas', 'Un vistoso sombrero de copa pirata fabricado enteramente de metal, fuertemente decorado con relucientes monedas de oro alrededor de su estructura. Es un cosmético muy llamativo que los jugadores veteranos adoran usar para presumir estatus.')">
+                <img src="acc_bounty.png" alt="Cazarrecompensas" class="img-accesorio">
+                <span class="nombre-accesorio">Cazarrecompensas</span>
+                <p class="desc-arma">Un sombrero pirata metálico adornado con monedas de oro brillantes. Súper vistoso.</p>
+            </td>
+        </tr>
+    </table>
+
+  
+    <div id="miZoom" class="pantalla-zoom" onclick="cerrarZoom()">
+        <div class="caja-ampliada" onclick="event.stopPropagation()">
+            <span class="boton-cerrar" onclick="cerrarZoom()">&times;</span>
+            <img id="imgZoom" src="" alt="Accesorio Ampliado">
+            <h3 id="tituloZoom"></h3>
+            <p id="textoZoom"></p>
+        </div>
+    </div>
+
+    
+    <script>
+        function abrirZoom(rutaImagen, titulo, descripcion) {
+            document.getElementById('imgZoom').src = rutaImagen;
+            document.getElementById('tituloZoom').innerText = titulo;
+            document.getElementById('textoZoom').innerText = descripcion;
+            document.getElementById('miZoom').style.display = 'flex';
+        }
+
+        function cerrarZoom() {
+            document.getElementById('miZoom').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

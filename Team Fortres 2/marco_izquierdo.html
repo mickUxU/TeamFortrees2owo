@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú de Navegación - TF2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ef9849; 
+            margin: 0;
+            padding: 15px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 0;
+            border-bottom: 2px solid #312e2c;
+            padding-bottom: 5px;
+        }
+
+        h2 a {
+            text-decoration: none;
+            color: #312e2c;
+            cursor: pointer;
+            display: block;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        
+        .enlace-menu {
+            text-decoration: none;
+            color: #762525;
+            font-weight: bold;
+            display: block;
+            padding: 5px;
+            border-radius: 4px;
+            transition: all 0.2s ease; 
+        }
+
+        
+        .enlace-menu:hover {
+            color: #b83838;
+            background-color: rgba(255, 255, 255, 0.2); 
+        }
+
+        
+        .enlace-menu.activo {
+            color: #ffffff !important;          
+            background-color: #312e2c;         
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <h2><a href="que_es.html" target="derecho" class="enlace-menu activo" onclick="resaltar(this)">Principal TF2</a></h2>
+    
+    <nav>
+        <ul>
+            
+          
+          <li><a href="modo_juego.html" target="derecho" class="enlace-menu" onclick="resaltar(this)">Modo de juego</a></li>
+            <li><a href="personajes.html" target="derecho" class="enlace-menu" onclick="resaltar(this)">Personajes</a></li>
+            <li><a href="accesorios.html" target="derecho" class="enlace-menu" onclick="resaltar(this)">Accesorios</a></li>
+            <li><a href="armas.html" target="derecho" class="enlace-menu" onclick="resaltar(this)">Armas</a></li>
+<li><a href="musica.html" target="derecho" class="enlace-menu" onclick="resaltar(this)">Musica</a></li>
+        </ul>
+    </nav>
+
+  
+    <script>
+        function resaltar(elemento) {
+            
+            var enlaces = document.querySelectorAll('.enlace-menu');
+            
+            
+            enlaces.forEach(function(enlace) {
+                enlace.classList.remove('activo');
+            });
+            
+            
+            elemento.classList.add('activo');
+        }
+    </script>
+
+</body>
+</html>
